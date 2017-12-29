@@ -42,11 +42,15 @@ h1 {
   text-shadow: 2px 3px 3px black;
  }
 .menu {
-position: absolute;
-top: 300px;
-left: 770px;
+margin-top: -80px;
 
 
+
+
+}
+#nav {
+  margin-left: 2px;
+  margin-right: 2px;
 }
   #banner {
     position: relative;
@@ -57,7 +61,7 @@ left: 770px;
 
   <section class="section black is-medium" id="banner">
     <div class="container">
-      <h1 class="title is-3 has-text-white-bis has-text-centered is-capitalized has-text-weight-bold">
+      <h1 id="sitetitle" class="title is-3 has-text-white-bis has-text-centered is-capitalized has-text-weight-bold">
         
         varCTRL&#39;s blog
       </h1>
@@ -74,21 +78,22 @@ left: 770px;
     </div>
   </section>
 <!--TOP Menu-->
-  <div class="menu" >
-
-    <nav class=".navbar " >
+  <div class="menu level" >
+<div class="level-item has-text-centered"></div>
+    <nav class=".navbar level-item" >
       
-        <a style="text-shadow: 2px 2px 3px grey" class="button is-text is-outlined is-primary has-text-centered" href="/test.github.io/"> Home</a>
+        <a style="text-shadow: 2px 2px 3px grey" id="nav" class="button is-text is-outlined is-primary " href="/test.github.io/"> Home</a>
         
-        <a style="text-shadow: 2px 2px 3px grey" class="button is-text is-outlined is-primary has-text-centered" href="/test.github.io/tags"> Tag</a>
+        <a style="text-shadow: 2px 2px 3px grey" id="nav" class="button is-text is-outlined is-primary " href="/test.github.io/tags"> Tag</a>
         
-        <a style="text-shadow: 2px 2px 3px grey" class="button is-text is-outlined is-primary has-text-centered" href="/test.github.io/projects"> Project</a>
+        <a style="text-shadow: 2px 2px 3px grey" id="nav" class="button is-text is-outlined is-primary " href="/test.github.io/projects"> Project</a>
         
-        <a style="text-shadow: 2px 2px 3px grey" class="button is-text is-outlined is-primary has-text-centered" href="/test.github.io/archives"> Archive</a>
+        <a style="text-shadow: 2px 2px 3px grey" id="nav" class="button is-text is-outlined is-primary " href="/test.github.io/archives"> Archive</a>
         
-        <a style="text-shadow: 2px 2px 3px grey" class="button is-text is-outlined is-primary has-text-centered" href="/test.github.io/about_me"> About</a>
+        <a style="text-shadow: 2px 2px 3px grey" id="nav" class="button is-text is-outlined is-primary " href="/test.github.io/about_me"> About</a>
         
     </nav>
+    <div class="level-item has-text-centered"></div>
 </div>
 
   <hr>
@@ -101,11 +106,41 @@ left: 770px;
 </header>
 
   <div class="main">
-    <!--full screen
-全屏图标-->
+    <!--title,date,tags-->
+<h2 id="hidden">
+    对社交类app的看法
+</h2>
+<span>
+  <p>On</p>2017-10-06
+    
+</span>
+<!-- content -->
+<p><strong>我个人认为,社交App注定是个失败的结局,尽管现在各大app都开始加入社交功能,但现在的结果是什么呢?喜新厌旧,要么就是偶尔有个事赶紧联系下,这完全就是邮箱的作用啊<a id="more"></a>过年了，发个红包浪费大量时间，人总会腻了疲劳吧,发展了那么多年了,有还有多少新功能可加入呢？</strong></p>
+<hr>
+<p><strong>社交类app同时在不断放大着废物的傲气吧,一群基本没什么能力的人把自己的头像装扮的漂亮点,签名深刻点,空间/朋友圈再补上一些内容,仿佛就有了与人才一斗的能力,真特么搞笑</strong></p>
+<hr>
+<p><strong>看看微博现在的乌烟瘴气,知乎也迟早要完,微信的营销公众号,尽散播着虚假无用信息的朋友圈,中国社会注意特色的QQ看点,空间,部落,及加入了评论功能的网易云音乐，QQ音乐等,尽是些听音乐听出优越感的愚民,及各种重复的要求点赞的段子，审美疲劳啊</strong></p>
+<hr>
+<p><strong>综上所述，我对社交呈悲观心态</strong></p>
+
+<!--tags&cate-->
 
 
+<a href="url_for(tag.path)>看法</a>
+ 
 
+
+<script>
+title = document.getElementById("hidden");
+title.style.display = "none";
+sitetitle = document.getElementById("sitetitle");
+titlev = title.childNodes[0].nodeValue;
+sitetitle.innerHTML = titlev;
+shadow = document.getElementById("shadow");
+shadow.style.visibility = "hidden";
+
+</script>
+<!-- 评论系统-->
 
 
   </div>

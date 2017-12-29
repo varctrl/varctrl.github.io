@@ -42,11 +42,15 @@ h1 {
   text-shadow: 2px 3px 3px black;
  }
 .menu {
-position: absolute;
-top: 300px;
-left: 770px;
+margin-top: -80px;
 
 
+
+
+}
+#nav {
+  margin-left: 2px;
+  margin-right: 2px;
 }
   #banner {
     position: relative;
@@ -57,7 +61,7 @@ left: 770px;
 
   <section class="section black is-medium" id="banner">
     <div class="container">
-      <h1 class="title is-3 has-text-white-bis has-text-centered is-capitalized has-text-weight-bold">
+      <h1 id="sitetitle" class="title is-3 has-text-white-bis has-text-centered is-capitalized has-text-weight-bold">
         
         varCTRL&#39;s blog
       </h1>
@@ -74,21 +78,22 @@ left: 770px;
     </div>
   </section>
 <!--TOP Menu-->
-  <div class="menu" >
-
-    <nav class=".navbar " >
+  <div class="menu level" >
+<div class="level-item has-text-centered"></div>
+    <nav class=".navbar level-item" >
       
-        <a style="text-shadow: 2px 2px 3px grey" class="button is-text is-outlined is-primary has-text-centered" href="/test.github.io/"> Home</a>
+        <a style="text-shadow: 2px 2px 3px grey" id="nav" class="button is-text is-outlined is-primary " href="/test.github.io/"> Home</a>
         
-        <a style="text-shadow: 2px 2px 3px grey" class="button is-text is-outlined is-primary has-text-centered" href="/test.github.io/tags"> Tag</a>
+        <a style="text-shadow: 2px 2px 3px grey" id="nav" class="button is-text is-outlined is-primary " href="/test.github.io/tags"> Tag</a>
         
-        <a style="text-shadow: 2px 2px 3px grey" class="button is-text is-outlined is-primary has-text-centered" href="/test.github.io/projects"> Project</a>
+        <a style="text-shadow: 2px 2px 3px grey" id="nav" class="button is-text is-outlined is-primary " href="/test.github.io/projects"> Project</a>
         
-        <a style="text-shadow: 2px 2px 3px grey" class="button is-text is-outlined is-primary has-text-centered" href="/test.github.io/archives"> Archive</a>
+        <a style="text-shadow: 2px 2px 3px grey" id="nav" class="button is-text is-outlined is-primary " href="/test.github.io/archives"> Archive</a>
         
-        <a style="text-shadow: 2px 2px 3px grey" class="button is-text is-outlined is-primary has-text-centered" href="/test.github.io/about_me"> About</a>
+        <a style="text-shadow: 2px 2px 3px grey" id="nav" class="button is-text is-outlined is-primary " href="/test.github.io/about_me"> About</a>
         
     </nav>
+    <div class="level-item has-text-centered"></div>
 </div>
 
   <hr>
@@ -101,11 +106,50 @@ left: 770px;
 </header>
 
   <div class="main">
-    <!--full screen
-全屏图标-->
+    <!--title,date,tags-->
+<h2 id="hidden">
+    SQL Injection(1)
+</h2>
+<span>
+  <p>On</p>2017-10-04
+    
+</span>
+<!-- content -->
+<h3 id="1-前言"><a href="#1-前言" class="headerlink" title="1.前言"></a>1.前言</h3><p>在当今的数字世界中，人们发现在维持公开的Internet连接的同时，保护网络和计算机系统的安全变得越来越困难。病毒、木马、后门、蠕虫等攻击层出不穷，虚假网站的钓鱼行为也让警惕性不高的公众深受其害,而Web这一块,首当其冲的就是SQL注入(SQL Injection)<br><a id="more"></a></p>
+<h3 id="2-什么是数据库-SQL"><a href="#2-什么是数据库-SQL" class="headerlink" title="2.什么是数据库(SQL)"></a>2.什么是数据库(SQL)</h3><p>比如我们手机里的电话簿，里面存放了各种各样的数据(联系人名字和号码啊) 这时，电话簿就相当于一个数据库.而网站呢，也是这个道理,只不过,它的数据库是软件(容器)</p>
+<h3 id="3-数据库的分类"><a href="#3-数据库的分类" class="headerlink" title="3.数据库的分类"></a>3.数据库的分类</h3><p>数据库主要分为四种:</p>
+<ul>
+<li>Access数据库，通常和asp语言一起开发网站,通常小型网站使用</li>
+<li>Mysql数据库，通常和php一起开发，中小型网站使用，不过，现在已经有很多大型网站在使用它了，最为广泛</li>
+<li>Sql server数据库，通常和aspx语言一起开发，中小型网站使用</li>
+<li>Oracle数据库，通常和jsp语言一起开发网站，大型网站使用<h3 id="4-网站为什么要使用数据库"><a href="#4-网站为什么要使用数据库" class="headerlink" title="4.网站为什么要使用数据库"></a>4.网站为什么要使用数据库</h3></li>
+</ul>
+<p>由于网站在实际使用中,为了管理庞大的数据信息,就会使用到数据库.数据库可以方便网站对所有数据信息进行统一的存储和分类组织,便于查询更新.用户在使用网站时,网站可以自动通过对数据库的查询,将所获得的信息按照一定格式反馈给用户,同时用户也是通过交互式的对话框,输入框提交给网站数据,从而使网站里的程序按照用户想要的信息进行查询,反馈给用户想要的信息</p>
+<h3 id="5-SQL注入漏洞产生的因素"><a href="#5-SQL注入漏洞产生的因素" class="headerlink" title="5.SQL注入漏洞产生的因素"></a>5.SQL注入漏洞产生的因素</h3><p>随着B/S(browser/server,即浏览器和服务器)模式应用(web其实也是个应用)开发的发展,使用这种模式编写应用程序的程序员也越来越多。但是由于这个行业的入门门槛不高，程序员的水平及经验也参差不齐，相当大一部分程序员在编写代码的时候，没有对用户输入数据的合法性进行判断，使应用程序存在安全隐患。恶意用户可以提交一段数据库查询代码，根据程序返回的结果，获得某些他想得知的数据，这就是所谓的SQL Injection，即SQL注入。</p>
+<h3 id="6-SQL注入攻击的危害范围"><a href="#6-SQL注入攻击的危害范围" class="headerlink" title="6.SQL注入攻击的危害范围"></a>6.SQL注入攻击的危害范围</h3><ul>
+<li>数据库信息泄漏(管理员,用户信息等)</li>
+<li>数据库被恶意操作</li>
+<li>服务器被入侵</li>
+</ul>
+
+<!--tags&cate-->
 
 
+<a href="url_for(tag.path)>Web安全</a><a href="url_for(tag.path)>SQLi</a>
+ 
 
+
+<script>
+title = document.getElementById("hidden");
+title.style.display = "none";
+sitetitle = document.getElementById("sitetitle");
+titlev = title.childNodes[0].nodeValue;
+sitetitle.innerHTML = titlev;
+shadow = document.getElementById("shadow");
+shadow.style.visibility = "hidden";
+
+</script>
+<!-- 评论系统-->
 
 
   </div>

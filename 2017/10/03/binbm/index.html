@@ -42,11 +42,15 @@ h1 {
   text-shadow: 2px 3px 3px black;
  }
 .menu {
-position: absolute;
-top: 300px;
-left: 770px;
+margin-top: -80px;
 
 
+
+
+}
+#nav {
+  margin-left: 2px;
+  margin-right: 2px;
 }
   #banner {
     position: relative;
@@ -57,7 +61,7 @@ left: 770px;
 
   <section class="section black is-medium" id="banner">
     <div class="container">
-      <h1 class="title is-3 has-text-white-bis has-text-centered is-capitalized has-text-weight-bold">
+      <h1 id="sitetitle" class="title is-3 has-text-white-bis has-text-centered is-capitalized has-text-weight-bold">
         
         varCTRL&#39;s blog
       </h1>
@@ -74,21 +78,22 @@ left: 770px;
     </div>
   </section>
 <!--TOP Menu-->
-  <div class="menu" >
-
-    <nav class=".navbar " >
+  <div class="menu level" >
+<div class="level-item has-text-centered"></div>
+    <nav class=".navbar level-item" >
       
-        <a style="text-shadow: 2px 2px 3px grey" class="button is-text is-outlined is-primary has-text-centered" href="/test.github.io/"> Home</a>
+        <a style="text-shadow: 2px 2px 3px grey" id="nav" class="button is-text is-outlined is-primary " href="/test.github.io/"> Home</a>
         
-        <a style="text-shadow: 2px 2px 3px grey" class="button is-text is-outlined is-primary has-text-centered" href="/test.github.io/tags"> Tag</a>
+        <a style="text-shadow: 2px 2px 3px grey" id="nav" class="button is-text is-outlined is-primary " href="/test.github.io/tags"> Tag</a>
         
-        <a style="text-shadow: 2px 2px 3px grey" class="button is-text is-outlined is-primary has-text-centered" href="/test.github.io/projects"> Project</a>
+        <a style="text-shadow: 2px 2px 3px grey" id="nav" class="button is-text is-outlined is-primary " href="/test.github.io/projects"> Project</a>
         
-        <a style="text-shadow: 2px 2px 3px grey" class="button is-text is-outlined is-primary has-text-centered" href="/test.github.io/archives"> Archive</a>
+        <a style="text-shadow: 2px 2px 3px grey" id="nav" class="button is-text is-outlined is-primary " href="/test.github.io/archives"> Archive</a>
         
-        <a style="text-shadow: 2px 2px 3px grey" class="button is-text is-outlined is-primary has-text-centered" href="/test.github.io/about_me"> About</a>
+        <a style="text-shadow: 2px 2px 3px grey" id="nav" class="button is-text is-outlined is-primary " href="/test.github.io/about_me"> About</a>
         
     </nav>
+    <div class="level-item has-text-centered"></div>
 </div>
 
   <hr>
@@ -101,11 +106,69 @@ left: 770px;
 </header>
 
   <div class="main">
-    <!--full screen
-全屏图标-->
+    <!--title,date,tags-->
+<h2 id="hidden">
+    原码,反码,补码
+</h2>
+<span>
+  <p>On</p>2017-10-03
+    
+</span>
+<!-- content -->
+<h3 id="1-位-bit-字节-byte"><a href="#1-位-bit-字节-byte" class="headerlink" title="1.位(bit),字节(byte)"></a>1.位(bit),字节(byte)</h3><p>位是计算机中最基本的存储单元 ,以二进制表示,即0,1两个数,每8位为一字节(byte),字节是存储资料的基本单元</p>
+<h2 id=""><a href="#" class="headerlink" title=""></a><a id="more"></a></h2><h3 id="2-真值-机器值"><a href="#2-真值-机器值" class="headerlink" title="2.真值,机器值"></a>2.真值,机器值</h3><p>机器数就是二进制数在计算机中内部的表现形式,计算机内部用一个数的最高位表示符号,正数为0, 负数为1.剩下7位表示数,由于最高位表示符号,所以有些情况下不等于这个数真正数值(真值)</p>
+<p>例如:</p>
+<p>机器数1111 1111的十进制数是-127,二进制数1111 1111的十进制数是255,这种情况下不一样 机器数0111 1111的十进制数是+127（注:”+”可省略）,二进制数0111 1111的十进制数是127，这种情况下一样</p>
+<table>
+<thead>
+<tr>
+<th>二进制数</th>
+<th style="text-align:right">机器数</th>
+<th style="text-align:center">十进制数</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1111 1111</td>
+<td style="text-align:right">-127</td>
+<td style="text-align:center">255</td>
+</tr>
+<tr>
+<td>0111 1111</td>
+<td style="text-align:right">+127</td>
+<td style="text-align:center">127</td>
+</tr>
+</tbody>
+</table>
+<h3 id="3-原码-反码-补码"><a href="#3-原码-反码-补码" class="headerlink" title="3.原码,反码,补码"></a>3.原码,反码,补码</h3><p>原码, 反码, 补码是机器存储一个具体数字的三种编码方式,计算机内部采用补码方式（注:但它可以用三种编码方式表示一个数）</p>
+<ul>
+<li><p>原码：就是机器数,表示范围 [1111 1111 , 0111 1111],即 十进制数 [-127 , 127]</p>
+</li>
+<li><p>反码 :正数的反码是其本身(原码)，负数的反码是在其原码的基础上, 符号位不变,其余位取反,比如十进制9的反码为0000 1001,十进制-9的反码是1111 0110（注：先转换成原码再计算）</p>
+</li>
+<li><p>补码：正数的补码就是其本身，负数的补码是在其原码的基础上, 符号位不变, 其余位取反, 最后加上1（相当于反码再加上1）,比如十进制9的补码为0000 1001,十进制-9的补码是1111 0111</p>
+</li>
+</ul>
+<h3 id="4-计算机内部采用补码的原因"><a href="#4-计算机内部采用补码的原因" class="headerlink" title="4.计算机内部采用补码的原因"></a>4.计算机内部采用补码的原因</h3><p>为了避免基础电路更加复杂,简化运算流程, 众所周知,减去一个正数等于加上一个负数, 即: 1-1 = 1 + (-1) = 0 , 又由于机器数最高位是符号,所以机器可以只有加法而没有减法, 这样计算机运算就更简单比如十进制中1-1=1+（-1）=0，采用原码的编码方式计算负数错误，采用反码的编码方式会出现两个0，（+0,-0），而采用补码的编码方式没有错误,又能比反码多表示一个数（注:补码将反码中的—0正确的表示成了-128）</p>
+
+<!--tags&cate-->
 
 
+<a href="url_for(tag.path)>bin</a>
+ 
 
+
+<script>
+title = document.getElementById("hidden");
+title.style.display = "none";
+sitetitle = document.getElementById("sitetitle");
+titlev = title.childNodes[0].nodeValue;
+sitetitle.innerHTML = titlev;
+shadow = document.getElementById("shadow");
+shadow.style.visibility = "hidden";
+
+</script>
+<!-- 评论系统-->
 
 
   </div>
