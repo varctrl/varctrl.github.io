@@ -15,6 +15,9 @@
 
 <link rel="stylesheet" href="/test.github.io/css/bulma.css">
 <link rel="stylesheet" href="/test.github.io/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/test.github.io/css/base.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
+    <link rel="stylesheet" href="/test.github.io/css/typo.css">
 </head>
 
 <body>
@@ -105,8 +108,12 @@ margin-top: -80px;
 
 </header>
 
-  <div class="main">
+
     <style>
+   body {
+       font-family:"Book Antiqua", Palatino, serif;
+   }
+
     #section {
 margin: 35px auto;
 max-width: 960px;
@@ -184,27 +191,42 @@ line-height: 20px;
     
   </div>
 <div style="height:30px;"></div>
-  </div>
+
 
 <style>
 #height {
   height: 100px;
-}
+  box-sizing: border-box;
+  color: rgb(51, 51, 51);
+  font-size: 18px;
+  font-weight: 400;
 
+}
+.footer_p {
+  box-sizing: border-box;
+  font-size: 18px;
+  font-weight: 200;
+  line-height: 27px;
+  text-align: center;
+  text-rendering: optimizelegibility;
+}
+.footer_link {
+  color: black;
+}
 </style>
 <footer class="footer" id="height">
 
   <div class="container" >
 <div class="content has-text-centered ">
-<p>
-  Theme By<a href="https://github.com/varctrl/" class="is-primary
+<p class="footer_p">
+  Theme By<a href="https://github.com/varctrl/" class="footer_link
 ">  varCTRL.</a>
-  Inspired By<a href="https://github.com/levblanc/hexo-theme-aero-dual" class="is-primary
+  Inspired By<a href="https://github.com/levblanc/hexo-theme-aero-dual" class="footer_link
 ">  Aero Dual.</a>
 </p>
 </div>
 <div class="content has-text-centered">
-  <p>Powered By <a href="https://hexo.io/" class="is-primary
+  <p class="footer_p">Powered By <a href="https://hexo.io/" class="footer_link
 "> Hexo.</a></p>
 </div>
   </div>
@@ -212,10 +234,13 @@ line-height: 20px;
 </footer>
 
 <script src="/test.github.io/js/jquery.js"></script>
+
 <!-- 特效 -->
 <script type="text/javascript" color="#555" opacity='0.9' zIndex="-1" count="100"
 src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
 
 </script>
 
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
 </body>

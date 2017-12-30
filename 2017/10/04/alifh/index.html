@@ -15,6 +15,9 @@
 
 <link rel="stylesheet" href="/test.github.io/css/bulma.css">
 <link rel="stylesheet" href="/test.github.io/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/test.github.io/css/base.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
+    <link rel="stylesheet" href="/test.github.io/css/typo.css">
 </head>
 
 <body>
@@ -105,13 +108,26 @@ margin-top: -80px;
 
 </header>
 
-  <div class="main">
-    <!--title,date,tags-->
+
+    <style>
+    #post_section {
+       width: 900px;
+        margin-top: 20px;
+
+    }
+
+</style>
+<section id="post_section" class="container">
+
+<!--title,date,tags-->
 <h2 id="hidden">
     云栖成都峰会精彩回顾
 </h2>
 <span>
+
   <p>On</p>2017-10-04
+    
+    <p> by varctrl </p>
     
 </span>
 <!-- content -->
@@ -120,21 +136,20 @@ margin-top: -80px;
 <!--tags&cate-->
 
 
-<script>
-var title = document.getElementById("hidden");
-title.style.display = "none";
-sitetitle = document.getElementById("sitetitle");
-titlev = title.childNodes[0].nodeValue;
-sitetitle.innerHTML = titlev;
-shadow = document.getElementById("shadow");
-shadow.style.visibility = "hidden";
-
-</script>
+</section>
+<script>var title = document.getElementById("hidden");
+    title.style.display = "none";
+    sitetitle = document.getElementById("sitetitle");
+    titlev = title.childNodes[0].nodeValue;
+    sitetitle.innerHTML = titlev;
+    shadow = document.getElementById("shadow");
+    shadow.style.visibility = "hidden";</script>
 <!-- 评论系统-->
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
 <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
   <script>
+
       var gitalk = new Gitalk({
           clientID: 'f2a5f7055784deeee9d1',
           clientSecret: '219af0c320458681a9bb7987452f18a02d26ab48',
@@ -149,27 +164,42 @@ shadow.style.visibility = "hidden";
   </script>
 
 
-  </div>
+
 
 <style>
 #height {
   height: 100px;
-}
+  box-sizing: border-box;
+  color: rgb(51, 51, 51);
+  font-size: 18px;
+  font-weight: 400;
 
+}
+.footer_p {
+  box-sizing: border-box;
+  font-size: 18px;
+  font-weight: 200;
+  line-height: 27px;
+  text-align: center;
+  text-rendering: optimizelegibility;
+}
+.footer_link {
+  color: black;
+}
 </style>
 <footer class="footer" id="height">
 
   <div class="container" >
 <div class="content has-text-centered ">
-<p>
-  Theme By<a href="https://github.com/varctrl/" class="is-primary
+<p class="footer_p">
+  Theme By<a href="https://github.com/varctrl/" class="footer_link
 ">  varCTRL.</a>
-  Inspired By<a href="https://github.com/levblanc/hexo-theme-aero-dual" class="is-primary
+  Inspired By<a href="https://github.com/levblanc/hexo-theme-aero-dual" class="footer_link
 ">  Aero Dual.</a>
 </p>
 </div>
 <div class="content has-text-centered">
-  <p>Powered By <a href="https://hexo.io/" class="is-primary
+  <p class="footer_p">Powered By <a href="https://hexo.io/" class="footer_link
 "> Hexo.</a></p>
 </div>
   </div>
@@ -177,10 +207,13 @@ shadow.style.visibility = "hidden";
 </footer>
 
 <script src="/test.github.io/js/jquery.js"></script>
+
 <!-- 特效 -->
 <script type="text/javascript" color="#555" opacity='0.9' zIndex="-1" count="100"
 src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
 
 </script>
 
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
 </body>
