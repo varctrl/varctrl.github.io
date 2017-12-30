@@ -146,22 +146,23 @@ shadow.style.visibility = "hidden";
 
 </script>
 <!-- 评论系统-->
+<script>
+    const gitment = new Gitment({
+
+        owner: '29482451',
+        repo: 'test.github.io',
+        oauth: {
+            client_id: '21a61f820431e4c3a27f',
+            client_secret: '3e5760ab01ae897df5ea3bec5be6283cfd3edc3c',
+        },
+        // ...
+        // For more available options, check out the documentation below
+    })
+    gitment.render('comments')
+</script>
+
 <link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
 <script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
-<script>
-const gitment = new Gitment({
-
-  owner: '29482451',
-  repo: 'test.github.io',
-  oauth: {
-    client_id: '21a61f820431e4c3a27f',
-    client_secret: '3e5760ab01ae897df5ea3bec5be6283cfd3edc3c',
-  },
-  // ...
-  // For more available options, check out the documentation below
-})
-gitment.render('comments')
-</script>
 
 
   </div>
