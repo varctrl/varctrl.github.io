@@ -130,27 +130,21 @@ shadow.style.visibility = "hidden";
 
 </script>
 <!-- 评论系统-->
-<div id="gitment">
+<div>
+  <script>const gitalk = new Gitalk({
+          clientID: 'f2a5f7055784deeee9d1',
+          clientSecret: '219af0c320458681a9bb7987452f18a02d26ab48',
+          repo: 'https://github.com/varctrl/test.github.io/branches',
+          owner: 'varctrl',
+          admin: ['varctrl'],
+          // facebook-like distraction free mode
+          distractionFreeMode: false
+      })
 
-<script>
-    var gitment = new Gitment({
-
-        owner: '29482451',
-        repo: 'test.github.io',
-        oauth: {
-            client_id: '21a61f820431e4c3a27f',
-            client_secret: '3e5760ab01ae897df5ea3bec5be6283cfd3edc3c',
-        },
-        // ...
-        // For more available options, check out the documentation below
-    })
-    gitment.render('comments')
-</script>
-
+      gitalk.render('gitalk-container')</script>
 </div>
-<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
-<script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
-
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
 
   </div>
 
