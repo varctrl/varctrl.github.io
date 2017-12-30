@@ -165,8 +165,10 @@ shadow.style.visibility = "hidden";
 
 </script>
 <!-- 评论系统-->
+<div id="gitment">
+
 <script>
-    const gitment = new Gitment({
+    var gitment = new Gitment({
 
         owner: '29482451',
         repo: 'test.github.io',
@@ -180,6 +182,7 @@ shadow.style.visibility = "hidden";
     gitment.render('comments')
 </script>
 
+</div>
 <link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
 <script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
 
