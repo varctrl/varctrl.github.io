@@ -16,9 +16,6 @@
 <link rel="stylesheet" href="/test.github.io/css/bulma.css">
 <link rel="stylesheet" href="/test.github.io/css/font-awesome.min.css">
     <link rel="stylesheet" href="/test.github.io/css/base.css">
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
-    <link rel="stylesheet" href="/test.github.io/css/typo.css">
-</head>
 
 <body>
 
@@ -93,7 +90,7 @@ margin-top: -80px;
         
         <a style="text-shadow: 2px 2px 3px grey" id="nav" class="button is-text is-outlined is-primary " href="/test.github.io/archives"> Archive</a>
         
-        <a style="text-shadow: 2px 2px 3px grey" id="nav" class="button is-text is-outlined is-primary " href="/test.github.io/about_me"> About</a>
+        <a style="text-shadow: 2px 2px 3px grey" id="nav" class="button is-text is-outlined is-primary " href="/test.github.io/about"> About</a>
         
     </nav>
     <div class="level-item has-text-centered"></div>
@@ -109,29 +106,56 @@ margin-top: -80px;
 </header>
 
 
-    <style>
+    
+<link rel="stylesheet" href="/test.github.io/css/highlight.css">
+<style>
+    #postsec {
+        clear: left;
+    }
+
     #post_section {
-       width: 900px;
-        margin-top: 20px;
+        width: 900px;
+        margin-top: 30px;
 
     }
 
+    .details {
+        float: left;
+    }
 </style>
 <section id="post_section" class="container">
 
-<!--title,date,tags-->
-<h2 id="hidden">
-    对社交类app的看法
-</h2>
-<span>
+    <!--title,date,tags-->
+    <h2 id="hidden">
+        对社交类app的看法
+    </h2>
 
-  <p>On</p>2017-10-06
-    
-    <p> by varctrl </p>
-    
-</span>
-<!-- content -->
-<p><strong>我个人认为,社交App注定是个失败的结局,尽管现在各大app都开始加入社交功能,但现在的结果是什么呢?喜新厌旧,要么就是偶尔有个事赶紧联系下,这完全就是邮箱的作用啊<a id="more"></a>过年了，发个红包浪费大量时间，人总会腻了疲劳吧,发展了那么多年了,有还有多少新功能可加入呢？</strong></p>
+    <section class="desec">
+        <strong class="details">On</strong>
+        <strong class="details">2017-10-06</strong>
+        
+        <strong class="details"> by varctrl </strong>
+        
+
+        
+        <strong class="details">tags:</strong>
+        <div class="tags">
+        <span class="tag">
+        
+
+
+x
+
+
+
+        </span>
+        </div>
+        
+    </section>
+
+
+    <!-- content -->
+    <section id="postsec"><p><strong>我个人认为,社交App注定是个失败的结局,尽管现在各大app都开始加入社交功能,但现在的结果是什么呢?喜新厌旧,要么就是偶尔有个事赶紧联系下,这完全就是邮箱的作用啊<a id="more"></a>过年了，发个红包浪费大量时间，人总会腻了疲劳吧,发展了那么多年了,有还有多少新功能可加入呢？</strong></p>
 <hr>
 <p><strong>社交类app同时在不断放大着废物的傲气吧,一群基本没什么能力的人把自己的头像装扮的漂亮点,签名深刻点,空间/朋友圈再补上一些内容,仿佛就有了与人才一斗的能力,真特么搞笑</strong></p>
 <hr>
@@ -139,7 +163,7 @@ margin-top: -80px;
 <hr>
 <p><strong>综上所述，我对社交呈悲观心态</strong></p>
 
-<!--tags&cate-->
+    </section>
 
 
 </section>
@@ -149,25 +173,10 @@ margin-top: -80px;
     titlev = title.childNodes[0].nodeValue;
     sitetitle.innerHTML = titlev;
     shadow = document.getElementById("shadow");
-    shadow.style.visibility = "hidden";</script>
+    shadow.style.visibility = "hidden";
+</script>
 <!-- 评论系统-->
 
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
-<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
-  <script>
-
-      var gitalk = new Gitalk({
-          clientID: 'f2a5f7055784deeee9d1',
-          clientSecret: '219af0c320458681a9bb7987452f18a02d26ab48',
-          repo: 'test.github.io',
-          owner: 'varctrl',
-          admin: '[varctrl]',
-          // facebook-like distraction free mode
-          distractionFreeMode: true
-      })
-
-      gitalk.render('gitalk-container')
-  </script>
 
 
 
@@ -219,7 +228,14 @@ margin-top: -80px;
 src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
 
 </script>
+<script src="/test.github.io/js/highlight.pack.js"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function(event) {
+        var codeBlocks = Array.prototype.slice.call(document.getElementsByTagName('pre'))
+        codeBlocks.forEach(function(block, index) {
+            hljs.highlightBlock(block);
+        });
+    });
+</script>
 
-<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
-<script>hljs.initHighlightingOnLoad();</script>
 </body>

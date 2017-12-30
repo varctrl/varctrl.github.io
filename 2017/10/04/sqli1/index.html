@@ -16,9 +16,6 @@
 <link rel="stylesheet" href="/test.github.io/css/bulma.css">
 <link rel="stylesheet" href="/test.github.io/css/font-awesome.min.css">
     <link rel="stylesheet" href="/test.github.io/css/base.css">
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
-    <link rel="stylesheet" href="/test.github.io/css/typo.css">
-</head>
 
 <body>
 
@@ -93,7 +90,7 @@ margin-top: -80px;
         
         <a style="text-shadow: 2px 2px 3px grey" id="nav" class="button is-text is-outlined is-primary " href="/test.github.io/archives"> Archive</a>
         
-        <a style="text-shadow: 2px 2px 3px grey" id="nav" class="button is-text is-outlined is-primary " href="/test.github.io/about_me"> About</a>
+        <a style="text-shadow: 2px 2px 3px grey" id="nav" class="button is-text is-outlined is-primary " href="/test.github.io/about"> About</a>
         
     </nav>
     <div class="level-item has-text-centered"></div>
@@ -109,29 +106,56 @@ margin-top: -80px;
 </header>
 
 
-    <style>
+    
+<link rel="stylesheet" href="/test.github.io/css/highlight.css">
+<style>
+    #postsec {
+        clear: left;
+    }
+
     #post_section {
-       width: 900px;
-        margin-top: 20px;
+        width: 900px;
+        margin-top: 30px;
 
     }
 
+    .details {
+        float: left;
+    }
 </style>
 <section id="post_section" class="container">
 
-<!--title,date,tags-->
-<h2 id="hidden">
-    SQL Injection(1)
-</h2>
-<span>
+    <!--title,date,tags-->
+    <h2 id="hidden">
+        SQL Injection(1)
+    </h2>
 
-  <p>On</p>2017-10-04
-    
-    <p> by varctrl </p>
-    
-</span>
-<!-- content -->
-<h3 id="1-前言"><a href="#1-前言" class="headerlink" title="1.前言"></a>1.前言</h3><p>在当今的数字世界中，人们发现在维持公开的Internet连接的同时，保护网络和计算机系统的安全变得越来越困难。病毒、木马、后门、蠕虫等攻击层出不穷，虚假网站的钓鱼行为也让警惕性不高的公众深受其害,而Web这一块,首当其冲的就是SQL注入(SQL Injection)<br><a id="more"></a></p>
+    <section class="desec">
+        <strong class="details">On</strong>
+        <strong class="details">2017-10-04</strong>
+        
+        <strong class="details"> by varctrl </strong>
+        
+
+        
+        <strong class="details">tags:</strong>
+        <div class="tags">
+        <span class="tag">
+        
+
+
+x x
+
+
+
+        </span>
+        </div>
+        
+    </section>
+
+
+    <!-- content -->
+    <section id="postsec"><h3 id="1-前言"><a href="#1-前言" class="headerlink" title="1.前言"></a>1.前言</h3><p>在当今的数字世界中，人们发现在维持公开的Internet连接的同时，保护网络和计算机系统的安全变得越来越困难。病毒、木马、后门、蠕虫等攻击层出不穷，虚假网站的钓鱼行为也让警惕性不高的公众深受其害,而Web这一块,首当其冲的就是SQL注入(SQL Injection)<br><a id="more"></a></p>
 <h3 id="2-什么是数据库-SQL"><a href="#2-什么是数据库-SQL" class="headerlink" title="2.什么是数据库(SQL)"></a>2.什么是数据库(SQL)</h3><p>比如我们手机里的电话簿，里面存放了各种各样的数据(联系人名字和号码啊) 这时，电话簿就相当于一个数据库.而网站呢，也是这个道理,只不过,它的数据库是软件(容器)</p>
 <h3 id="3-数据库的分类"><a href="#3-数据库的分类" class="headerlink" title="3.数据库的分类"></a>3.数据库的分类</h3><p>数据库主要分为四种:</p>
 <ul>
@@ -148,7 +172,7 @@ margin-top: -80px;
 <li>服务器被入侵</li>
 </ul>
 
-<!--tags&cate-->
+    </section>
 
 
 </section>
@@ -158,25 +182,10 @@ margin-top: -80px;
     titlev = title.childNodes[0].nodeValue;
     sitetitle.innerHTML = titlev;
     shadow = document.getElementById("shadow");
-    shadow.style.visibility = "hidden";</script>
+    shadow.style.visibility = "hidden";
+</script>
 <!-- 评论系统-->
 
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
-<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
-  <script>
-
-      var gitalk = new Gitalk({
-          clientID: 'f2a5f7055784deeee9d1',
-          clientSecret: '219af0c320458681a9bb7987452f18a02d26ab48',
-          repo: 'test.github.io',
-          owner: 'varctrl',
-          admin: '[varctrl]',
-          // facebook-like distraction free mode
-          distractionFreeMode: true
-      })
-
-      gitalk.render('gitalk-container')
-  </script>
 
 
 
@@ -228,7 +237,14 @@ margin-top: -80px;
 src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
 
 </script>
+<script src="/test.github.io/js/highlight.pack.js"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function(event) {
+        var codeBlocks = Array.prototype.slice.call(document.getElementsByTagName('pre'))
+        codeBlocks.forEach(function(block, index) {
+            hljs.highlightBlock(block);
+        });
+    });
+</script>
 
-<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
-<script>hljs.initHighlightingOnLoad();</script>
 </body>

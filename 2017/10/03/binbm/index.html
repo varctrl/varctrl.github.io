@@ -16,9 +16,6 @@
 <link rel="stylesheet" href="/test.github.io/css/bulma.css">
 <link rel="stylesheet" href="/test.github.io/css/font-awesome.min.css">
     <link rel="stylesheet" href="/test.github.io/css/base.css">
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
-    <link rel="stylesheet" href="/test.github.io/css/typo.css">
-</head>
 
 <body>
 
@@ -93,7 +90,7 @@ margin-top: -80px;
         
         <a style="text-shadow: 2px 2px 3px grey" id="nav" class="button is-text is-outlined is-primary " href="/test.github.io/archives"> Archive</a>
         
-        <a style="text-shadow: 2px 2px 3px grey" id="nav" class="button is-text is-outlined is-primary " href="/test.github.io/about_me"> About</a>
+        <a style="text-shadow: 2px 2px 3px grey" id="nav" class="button is-text is-outlined is-primary " href="/test.github.io/about"> About</a>
         
     </nav>
     <div class="level-item has-text-centered"></div>
@@ -109,29 +106,56 @@ margin-top: -80px;
 </header>
 
 
-    <style>
+    
+<link rel="stylesheet" href="/test.github.io/css/highlight.css">
+<style>
+    #postsec {
+        clear: left;
+    }
+
     #post_section {
-       width: 900px;
-        margin-top: 20px;
+        width: 900px;
+        margin-top: 30px;
 
     }
 
+    .details {
+        float: left;
+    }
 </style>
 <section id="post_section" class="container">
 
-<!--title,date,tags-->
-<h2 id="hidden">
-    原码,反码,补码
-</h2>
-<span>
+    <!--title,date,tags-->
+    <h2 id="hidden">
+        原码,反码,补码
+    </h2>
 
-  <p>On</p>2017-10-03
-    
-    <p> by varctrl </p>
-    
-</span>
-<!-- content -->
-<h3 id="1-位-bit-字节-byte"><a href="#1-位-bit-字节-byte" class="headerlink" title="1.位(bit),字节(byte)"></a>1.位(bit),字节(byte)</h3><p>位是计算机中最基本的存储单元 ,以二进制表示,即0,1两个数,每8位为一字节(byte),字节是存储资料的基本单元</p>
+    <section class="desec">
+        <strong class="details">On</strong>
+        <strong class="details">2017-10-03</strong>
+        
+        <strong class="details"> by varctrl </strong>
+        
+
+        
+        <strong class="details">tags:</strong>
+        <div class="tags">
+        <span class="tag">
+        
+
+
+x
+
+
+
+        </span>
+        </div>
+        
+    </section>
+
+
+    <!-- content -->
+    <section id="postsec"><h3 id="1-位-bit-字节-byte"><a href="#1-位-bit-字节-byte" class="headerlink" title="1.位(bit),字节(byte)"></a>1.位(bit),字节(byte)</h3><p>位是计算机中最基本的存储单元 ,以二进制表示,即0,1两个数,每8位为一字节(byte),字节是存储资料的基本单元</p>
 <h2 id=""><a href="#" class="headerlink" title=""></a><a id="more"></a></h2><h3 id="2-真值-机器值"><a href="#2-真值-机器值" class="headerlink" title="2.真值,机器值"></a>2.真值,机器值</h3><p>机器数就是二进制数在计算机中内部的表现形式,计算机内部用一个数的最高位表示符号,正数为0, 负数为1.剩下7位表示数,由于最高位表示符号,所以有些情况下不等于这个数真正数值(真值)</p>
 <p>例如:</p>
 <p>机器数1111 1111的十进制数是-127,二进制数1111 1111的十进制数是255,这种情况下不一样 机器数0111 1111的十进制数是+127（注:”+”可省略）,二进制数0111 1111的十进制数是127，这种情况下一样</p>
@@ -167,7 +191,7 @@ margin-top: -80px;
 </ul>
 <h3 id="4-计算机内部采用补码的原因"><a href="#4-计算机内部采用补码的原因" class="headerlink" title="4.计算机内部采用补码的原因"></a>4.计算机内部采用补码的原因</h3><p>为了避免基础电路更加复杂,简化运算流程, 众所周知,减去一个正数等于加上一个负数, 即: 1-1 = 1 + (-1) = 0 , 又由于机器数最高位是符号,所以机器可以只有加法而没有减法, 这样计算机运算就更简单比如十进制中1-1=1+（-1）=0，采用原码的编码方式计算负数错误，采用反码的编码方式会出现两个0，（+0,-0），而采用补码的编码方式没有错误,又能比反码多表示一个数（注:补码将反码中的—0正确的表示成了-128）</p>
 
-<!--tags&cate-->
+    </section>
 
 
 </section>
@@ -177,25 +201,10 @@ margin-top: -80px;
     titlev = title.childNodes[0].nodeValue;
     sitetitle.innerHTML = titlev;
     shadow = document.getElementById("shadow");
-    shadow.style.visibility = "hidden";</script>
+    shadow.style.visibility = "hidden";
+</script>
 <!-- 评论系统-->
 
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
-<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
-  <script>
-
-      var gitalk = new Gitalk({
-          clientID: 'f2a5f7055784deeee9d1',
-          clientSecret: '219af0c320458681a9bb7987452f18a02d26ab48',
-          repo: 'test.github.io',
-          owner: 'varctrl',
-          admin: '[varctrl]',
-          // facebook-like distraction free mode
-          distractionFreeMode: true
-      })
-
-      gitalk.render('gitalk-container')
-  </script>
 
 
 
@@ -247,7 +256,14 @@ margin-top: -80px;
 src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
 
 </script>
+<script src="/test.github.io/js/highlight.pack.js"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function(event) {
+        var codeBlocks = Array.prototype.slice.call(document.getElementsByTagName('pre'))
+        codeBlocks.forEach(function(block, index) {
+            hljs.highlightBlock(block);
+        });
+    });
+</script>
 
-<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
-<script>hljs.initHighlightingOnLoad();</script>
 </body>
