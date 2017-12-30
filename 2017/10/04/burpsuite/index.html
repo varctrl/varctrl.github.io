@@ -148,21 +148,22 @@ shadow.style.visibility = "hidden";
 
 </script>
 <!-- 评论系统-->
-<div>
+<div id="gitalk">
+</div>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
   <script>const gitalk = new Gitalk({
           clientID: 'f2a5f7055784deeee9d1',
           clientSecret: '219af0c320458681a9bb7987452f18a02d26ab48',
-          repo: 'https://github.com/varctrl/test.github.io/branches',
-          owner: 'varctrl',
+          repo: 'test.github.io',
+          owner: '29482451',
           admin: ['varctrl'],
           // facebook-like distraction free mode
           distractionFreeMode: false
       })
 
       gitalk.render('gitalk-container')</script>
-</div>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
-<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+  </script>
 
   </div>
 
